@@ -1,0 +1,312 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.purple {
+  color: #7342d6;
+}
+
+h1 {
+  color: #7342d6;
+  font-size: 56px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+button{
+    cursor: pointer;
+}
+
+button:active{
+    transform: translateY(1px);
+}
+
+.btn {
+  background-color: #7342d6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 12px 24px;
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  width: 160px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.container {
+  padding: 56px 0;
+}
+
+.row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* NAV */
+
+nav {
+  height: 80px;
+  display: flex;
+}
+
+.nav__container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__link {
+  padding: 8px;
+  margin-left: 16px;
+  font-size: 20px;
+  color: #7342d6;
+  font-weight: bold;
+}
+
+.nav__link--primary {
+  border: 2px solid #7342d6;
+  border-radius: 4px;
+}
+
+.nav__link--primary:hover{
+    text-decoration: none;
+}
+
+/* HEADER */
+
+#landing {
+  background-color: rgba(115, 66, 214, 0.1);
+}
+
+header {
+  height: calc(100vh-80px);
+}
+
+.header__container {
+  width: 100%;
+  height: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.header__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__img--wrapper {
+  padding: 20px;
+}
+
+.header__img {
+  width: 100%;
+}
+
+/* HIGHLIGHTS */
+
+#highlights {
+  max-width: 100vw;
+  position: relative;
+}
+
+#highlights:after,
+#highlights:before {
+  background: url(/assets/wave.svg);
+  content: "";
+  position: absolute;
+  width: 101vw;
+  height: 12vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: 0;
+  z-index: 1;
+}
+
+#highlights:before {
+  transform: translateY(-100%);
+  top: 1px;
+}
+
+#highlights:after {
+  transform: translateY(100%) rotate(180deg);
+  bottom: 1px;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3);
+  padding: 0 24px;
+}
+
+.highlight__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.highlight__img {
+  border: 2px solid #7342d65d;
+  border-radius: 4px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.highlight__subtitle {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.highlight__para {
+  text-align: center;
+  max-width: 280px;
+}
+
+/* FEATURES */
+
+#features {
+  background-color: rgba(115, 66, 214, 0.1);
+  padding-top: 8vw;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding: 24px;
+}
+
+.book__img {
+  max-height: 380px;
+  cursor: not-allowed;
+  transition: all 300ms ease;
+}
+
+.book:hover .book__img{
+    transform: scale(1.03);
+}
+
+.book__img--wrapper{
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+}
+
+.book__title{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.book__title:hover{
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.book__ratings{
+    margin-bottom: 8px;
+    color: #fabf2a;
+}
+
+.book__price--normal {
+  text-decoration: line-through;
+  padding-right: 6px;
+  color: #bfbfbf;
+}
+
+/* EXPLORE */
+
+#explore {
+  background-color: rgba(115, 66, 214, 0.1);
+}
+
+.row__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #242424;
+}
+
+.footer__logo--img {
+  width: 160px;
+  filter: grayscale(1) invert(1);
+}
+
+.footer__list{
+    margin: 20px 0 24px 0;
+}
+
+.footer__link{
+    color: #fff;
+    padding: 0 8px;
+}
+
+.footer__copyright{
+    color: #fff;
+}
+
+.no-cursor{
+    cursor: not-allowed;
+}
